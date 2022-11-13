@@ -4,7 +4,52 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href='css/main.css' />
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script type="text/javascript" src='js/kuku.js'></script>
+<script>
+$(function () {
+	//ヘッドセット
+	$('#1-1').text(1);
+	$('#1-2').text(2);
+	$('#1-3').text(3);
+	$('#1-4').text(4);
+	$('#1-5').text(5);
+	$('#1-6').text(6);
+	$('#1-7').text(7);
+	$('#1-8').text(8);
+	$('#1-9').text(9);
+});
+
+function kuku2() {
+	alert('2の段'); // ←これは２の段をしているとのことを表示
+	
+//最初のデータを取得
+	kuku1 = 2; // ←２の段なので２を実装
+	
+//ループして計算とデータの書き込みを行う
+	for (i = 1; i < 10; i++){
+
+		//idの生成（ラベルセレクタの生成）
+		id='tr #2-';// ←ID準備する
+		id　=　id　+　i;// ←IDを生成する
+		alert('2?'+i);
+		//九九を計算
+		kuku_answer = kuku1 * i;// ←九九の計算を行う
+		$(id).text(kuku_answer);// ←labelに値を表示させる
+	}
+}
+function kuku_keisan() {
+	alert('start');
+	kuku2();
+	kuku3();
+	kuku4();
+	kuku5();
+	kuku6();
+	kuku7();
+	kuku8();
+	kuku9();
+	alert('end');
+}
+
+</script>
 <title>jQueryで九九計算</title>
 </head>
 <body>
